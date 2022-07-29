@@ -1,4 +1,4 @@
-import styles from "../styles/transactionHistory.module.css";
+import styles from "./transactionHistory.module.css";
 import propTypes from 'prop-types';
 
 export function TransactionHistory(props) {

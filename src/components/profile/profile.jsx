@@ -1,5 +1,5 @@
 import propTypes from 'prop-types';
-import styles from "../styles/profile.module.css";
+import styles from "./profile.module.css";
 
 const Profile = (props) => {
     return (
