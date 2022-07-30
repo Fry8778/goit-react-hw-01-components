@@ -1,10 +1,10 @@
-import styles from "./friendList.module.css";
+import styles from "../friendsList/friendList.module.css";
 import propTypes from 'prop-types';
 
-const FriendCard = ({avatar, name, isOnline}) => {
+const FriendListItem = ({avatar, name, isOnline}) => {
     return(
         <li className={styles.item}>
-            <span className={styles.status}>{isOnline}</span>
+            <span className={`${styles.status} ${isOnline ? styles.statusOnline : styles.statusOffline}`}></span>
             <img className={styles.avatar}
                 src={avatar}
                 alt={name}
@@ -14,12 +14,11 @@ const FriendCard = ({avatar, name, isOnline}) => {
     );
 };
 
-FriendCard.propTypes = {
+FriendListItem.propTypes = {
     avatar: propTypes.string,
     name: propTypes.string,
-    isOnline: propTypes.bool,
-    id: propTypes.number,
+    isOnline: propTypes.bool,   
 
 };
 
-export default FriendCard;
+export default FriendListItem;

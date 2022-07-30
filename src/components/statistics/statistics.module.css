@@ -29,14 +29,14 @@
     margin-bottom: 5px;
 }
 
-.statList {
+.statArray {
     display: flex;
     width: 100%;
     box-shadow: 10px 5px 5px rgb(16 15 15);
 
 }
 
-.statList li {
+.statArray li {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -44,18 +44,18 @@
 
 }
 
-.statList li:nth-child(1) {
+.statArray li:nth-child(1) {
     background-color: rgb(142, 190, 245);
 }
 
-.statList li:nth-child(2) {
+.statArray li:nth-child(2) {
     background-color: rgb(167, 159, 179);
 }
 
-.statList li:nth-child(3) {
+.statArray li:nth-child(3) {
     background-color: rgb(245, 21, 32);
 }
 
-.statList li:nth-child(4) {
+.statArray li:nth-child(4) {
     background-color: rgb(0, 255, 213);
 }

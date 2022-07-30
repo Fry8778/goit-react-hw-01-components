@@ -28,3 +28,19 @@
 .item:not(:last-child) {
     margin-bottom: 10px;
 }
+
+.status {
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-left: 15px;
+  }
+  
+  .statusOnline {
+    background-color: rgb(50, 255, 50);
+  }
+  
+  .statusOffline {
+    background-color: rgb(255, 50, 50);
+  }

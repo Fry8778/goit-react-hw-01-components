@@ -1,32 +1,32 @@
 import propTypes from 'prop-types';
 import styles from "./profile.module.css";
 
-const Profile = (props) => {
+export const Profile = ({username, tag, location, avatar, stats}) => {
     return (
     <div className={styles.profile}>
         <div className={styles.description}>
             <img
-                src={props.data.avatar}
+                src={avatar}
                 alt="username"
                 className={styles.avatar}
             />
-            <p className={styles.name}>{props.data.username}</p>
-            <p className={styles.tag}>{props.data.tag}</p>
-            <p className={styles.location}>{props.data.location}</p>
+            <p className={styles.name}>{username}</p>
+            <p className={styles.tag}>{tag}</p>
+            <p className={styles.location}>{location}</p>
         </div>
 
         <ul className={styles.stats}>
             <li>
                 <span className={styles.label}>Followers</span>
-                <span className={styles.quantity}>{props.data.stats.followers}</span>
+                <span className={styles.quantity}>{stats.followers}</span>
             </li>
             <li>
                 <span className={styles.label}>Views</span>
-                <span className={styles.quantity}>{props.data.stats.views}</span>
+                <span className={styles.quantity}>{stats.views}</span>
             </li>
             <li>
                 <span className={styles.label}>Likes</span>
-                <span className={styles.quantity}>{props.data.stats.likes}</span>
+                <span className={styles.quantity}>{stats.likes}</span>
             </li>
         </ul>
     </div>
@@ -35,10 +35,10 @@ const Profile = (props) => {
 }
 
 Profile.propTypes = {
-    avatar: propTypes.string,
     username: propTypes.string,
     tag: propTypes.string,
     location: propTypes.string,
+    avatar: propTypes.string,
     stats: propTypes.object,
 };
 

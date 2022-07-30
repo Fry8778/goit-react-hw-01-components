@@ -1,12 +1,12 @@
 import styles from "./transactionHistory.module.css";
 import propTypes from 'prop-types';
 
-export function TransactionHistory(props) {
-  const historyName = props.history.map((itemHistory) => (
-    <tr key={itemHistory.id}>
-      <td>{itemHistory.type}</td>
-      <td>{itemHistory.amount}</td>
-      <td>{itemHistory.currency}</td>
+function TransactionHistory ({item}) {
+  const historyList = item.map((itemArray) => (
+    <tr key={itemArray.id}>
+      <td>{itemArray.type}</td>
+      <td>{itemArray.amount}</td>
+      <td>{itemArray.currency}</td>
     </tr>
   ));
   return (
@@ -21,7 +21,7 @@ export function TransactionHistory(props) {
         </thead>
 
         <tbody>
-          {historyName}
+          {historyList}
         </tbody>
       </table>
     </div>
@@ -31,11 +31,7 @@ export function TransactionHistory(props) {
 }
 
 TransactionHistory.propTypes = {
-  id: propTypes.string,
-  type: propTypes.string,
-  amount: propTypes.string,
-  currency: propTypes.string,
-
+  item: propTypes.array,
 };
 
 export default TransactionHistory;
